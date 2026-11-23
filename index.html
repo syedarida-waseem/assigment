@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ff81c2, #ece1ea);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+h1 {
+    color:black;
+    font-size: 32px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.25);
+    width: 100%;
+    max-width: 750px;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container p {
+    color:black;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    outline: none;
+    background-color:white;
+}
+
+button {
+    background-color: #451d4b;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 12px;
+    font-size: 19px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ae44ac;
+}
+
+#result {
+    margin-top: 30px;
+    color: black;
+    font-size: 17px;
+    line-height: 2;
+    text-align: left;
+}
+
+#result:empty {
+    display: none;
+}
+
+#result h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 25px;
+    }
+}
+
+</style>
+
+<body>
+
+    <h1>Student Result Management System </h1>
+
+    <div class="container">
+
+        <p>Enter your subject marks below </p>
+
+        <input type="text" id="name" placeholder="Student Name">
+
+        <input type="number" id="english" placeholder="English (out of 100)">
+
+        <input type="number" id="math" placeholder="Math (out of 100)">
+
+        <input type="number" id="computer" placeholder="Computer (out of 100)">
+
+        <input type="number" id="physics" placeholder="Physics (out of 100)">
+
+        <input type="number" id="urdu" placeholder="Urdu (out of 100)">
+
+        <button onclick="calculateResult()">Calculate </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
